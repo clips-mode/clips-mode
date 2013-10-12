@@ -64,7 +64,7 @@ pair of the form `(DIRECTORY . FILE)' describing the last
 
 (when (not inferior-clips-mode-map)
   (setq inferior-clips-mode-map
-    (copy-keymap comint-mode-map)))
+        (copy-keymap comint-mode-map)))
 (define-key clips-mode-map "\C-c\C-l" 'inf-clips-load-file)
 (define-key inferior-clips-mode-map "\C-c\C-l" 'inf-clips-load-file)
 (define-key inferior-clips-mode-map "\C-ci" 'inf-clips-reset-engine) ; initialize engine
@@ -177,8 +177,8 @@ functionp")))))
                       source-modes t))
   (comint-check-source fname)
   (setq previous-dir/file
-	(cons (file-name-directory fname)
-	      (file-name-nondirectory fname)))
+        (cons (file-name-directory fname)
+              (file-name-nondirectory fname)))
   (inf-clips-send-request (format "(load \"%s\")" fname))
   (switch-to-inferior-clips t))
 
@@ -216,8 +216,8 @@ With argument, positions cursor at end of buffer."
   (interactive "P")
   (if (get-buffer-process inferior-clips-buffer)
       (let ((pop-up-frames
-            ;; Be willing to use another frame
-            ;; that already has the window in it.
+             ;; Be willing to use another frame
+             ;; that already has the window in it.
              (or pop-up-frames
                  (get-buffer-window inferior-clips-buffer t))))
         (pop-to-buffer inferior-clips-buffer))
