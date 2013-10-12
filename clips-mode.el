@@ -43,7 +43,7 @@
 (when (not clips-mode-map)
   (let ((map (make-sparse-keymap "Clips")))
     (setq clips-mode-map
-      (nconc (make-sparse-keymap) (if (boundp 'shared-lisp-mode-map) shared-lisp-mode-map lisp-mode-shared-map )))
+          (nconc (make-sparse-keymap) (if (boundp 'shared-lisp-mode-map) shared-lisp-mode-map lisp-mode-shared-map )))
 ;;; 14-12-2009,Carmen: para que admita la que este definida, shared-lisp-mode-map o lisp-mode-shared-map
     (define-key clips-mode-map [menu-bar] (make-sparse-keymap))
     (define-key clips-mode-map [menu-bar clips]
@@ -59,20 +59,20 @@
     (let ((i 0))
       (setq clips-mode-syntax-table (make-syntax-table))
       (while (< i ?0)
-	(modify-syntax-entry i "_   " clips-mode-syntax-table)
-	(setq i (1+ i)))
+        (modify-syntax-entry i "_   " clips-mode-syntax-table)
+        (setq i (1+ i)))
       (setq i (1+ ?9))
       (while (< i ?A)
-	(modify-syntax-entry i "_   " clips-mode-syntax-table)
-	(setq i (1+ i)))
+        (modify-syntax-entry i "_   " clips-mode-syntax-table)
+        (setq i (1+ i)))
       (setq i (1+ ?Z))
       (while (< i ?a)
-	(modify-syntax-entry i "_   " clips-mode-syntax-table)
-	(setq i (1+ i)))
+        (modify-syntax-entry i "_   " clips-mode-syntax-table)
+        (setq i (1+ i)))
       (setq i (1+ ?z))
       (while (< i 128)
-	(modify-syntax-entry i "_   " clips-mode-syntax-table)
-	(setq i (1+ i)))
+        (modify-syntax-entry i "_   " clips-mode-syntax-table)
+        (setq i (1+ i)))
       (modify-syntax-entry ?  "    " clips-mode-syntax-table)
       (modify-syntax-entry ?\t "    " clips-mode-syntax-table)
       (modify-syntax-entry ?\n ">   " clips-mode-syntax-table)
@@ -106,13 +106,13 @@
             '("deffunction" "deftemplate" "defrule" "deffacts" "defgeneric"
               "defmodule" "defadvice" "defglobal" "defmethod"
               "definstance" "defclass")))
-	  (clips-identifier
-	   (let ((letter "a-zA-Z_$\-\300-\326\330-\366\370-\377")
-		 (digit "0-9"))
-	     (concat "\\<\\([" letter "][" letter digit "]*\\)\\>"))))
+          (clips-identifier
+           (let ((letter "a-zA-Z_$\-\300-\326\330-\366\370-\377")
+                 (digit "0-9"))
+             (concat "\\<\\([" letter "][" letter digit "]*\\)\\>"))))
       (list
        (cons (concat "\\<" clips-constructs "\\>\\s *" clips-identifier)
-	     `(,(+ 1 (regexp-opt-depth clips-constructs)) font-lock-function-name-face))
+             `(,(+ 1 (regexp-opt-depth clips-constructs)) font-lock-function-name-face))
        (cons (concat "\\<\\(" clips-constructs "\\)\\>") 'font-lock-keyword-face))))
   "Subdued expressions to highlight in Clips modes.")
 
@@ -141,33 +141,33 @@
 (defvar clips-imenu-generic-expression
   (list
    (list nil
-	 (purecopy
-	  (concat "^\\s-*("
-		  (eval-when-compile
-		    (regexp-opt '("deffunction" "defgeneric"
-				  "defadvice" "defmethod") t))
-		  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
-	 2)
+         (purecopy
+          (concat "^\\s-*("
+                  (eval-when-compile
+                    (regexp-opt '("deffunction" "defgeneric"
+                                  "defadvice" "defmethod") t))
+                  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
+         2)
    (list (purecopy "Variables/Instances")
-	 (purecopy
-	  (concat "^\\s-*("
-		  (eval-when-compile
-		    (regexp-opt '("defglobal" "definstance") t))
-		  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
-   	 2)
+         (purecopy
+          (concat "^\\s-*("
+                  (eval-when-compile
+                    (regexp-opt '("defglobal" "definstance") t))
+                  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
+         2)
    (list (purecopy "Types/Objects")
-	 (purecopy
-	  (concat "^\\s-*("
-		  (eval-when-compile
-		    (regexp-opt '("deftemplate" "defclass") t))
-		  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
-	 2)
+         (purecopy
+          (concat "^\\s-*("
+                  (eval-when-compile
+                    (regexp-opt '("deftemplate" "defclass") t))
+                  "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
+         2)
    (list (purecopy "Rules/Facts")
-	 (purecopy (concat "^\\s-*("
-			   (eval-when-compile
-			     (regexp-opt '("defrule" "deffacts") t))
-			   "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
-	 2))
+         (purecopy (concat "^\\s-*("
+                           (eval-when-compile
+                             (regexp-opt '("defrule" "deffacts") t))
+                           "\\s-+'?\\(\\(\\sw\\|\\s_\\)+\\)"))
+         2))
   "Imenu generic expression for Clips mode.  See `imenu-generic-expression'.")
 
 (defun clips-initialize-mode ()
@@ -205,7 +205,7 @@
   (setq comment-indent-function 'lisp-comment-indent)
   (make-local-variable 'imenu-generic-expression)
   (setq imenu-generic-expression clips-imenu-generic-expression
-	imenu-case-fold-search nil)
+        imenu-case-fold-search nil)
   (make-local-variable 'font-lock-defaults)
   (setq font-lock-defaults '(clips-font-lock-keywords))
   (use-local-map clips-mode-map)
