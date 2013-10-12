@@ -1,3 +1,5 @@
+;;; Evaluate this entire file to prepare the package.
+
 (setq TMPDIR "~/tmp")
 ;; TODO: Determine this from a file dynamically
 (setq RELNAM "clips-mode-0.7")
