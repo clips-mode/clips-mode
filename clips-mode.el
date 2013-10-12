@@ -6,7 +6,7 @@
 ;;         Andrey Kotlarski <m00naticus@gmail.com>
 ;;         Grant Rettke <grettke@acm.org>
 ;; Maintainer: Grant Rettke <grettke@acm.org>
-;; Version: 0.6
+;; Version: 0.7
 ;; Keywords: clips
 
 ;;;*****************************************************************************
