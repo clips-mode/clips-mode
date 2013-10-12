@@ -1,14 +1,8 @@
 ;;; clips-mode.el --- Clips editing mode.
 
 ;;;************************************************************************
-;;; Basado en jess-mode.el de:
 
-;; Copyright (C) 1999 by David E. Young.
-
-;; Author: David E. Young <david.young@fnc.fujitsu.com>
-;; Keywords: languages, clips
-
-;; This is version 0.6 of 9 February 2010.
+;; Copyright (C) 1999 by David E. Young <david.young@fnc.fujitsu.com>.
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,16 +11,34 @@
 
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program; if not, write to the Free Software
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-;; 02111-1307  USA
+;; 02111-1307 USA.
+
 ;;;************************************************************************
-;; modified by Andrey Kotlarski <m00naticus@gmail.com> <2010-02-04 15:39>
-;;  to include Imenu rules
+
+;; Copyright (C) 2010 by Andrey Kotlarski <m00naticus@gmail.com>.
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 2, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program; if not, write to the Free Software
+;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+;; 02111-1307 USA.
+
+;;;************************************************************************
 
 ;;; Code:
 
