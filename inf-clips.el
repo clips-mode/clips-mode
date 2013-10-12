@@ -1,5 +1,14 @@
 ;;; inf-clips.el --- Inferior Clips mode.
 
+;; Copyright (C) 2013 Grant Rettke <grettke@acm.org>
+
+;; Author: David E. Young <david.young@fnc.fujitsu.com>
+;;         Andrey Kotlarski <m00naticus@gmail.com>
+;;         Grant Rettke <grettke@acm.org>
+;; Maintainer: Grant Rettke <grettke@acm.org>
+;; Version: 0.6
+;; Keywords: clips
+
 ;;;*****************************************************************************
 
 ;; Copyright © 1999 by David E. Young <david.young@fnc.fujitsu.com>.
@@ -53,6 +62,11 @@
 ;; clips-mode. If not, see <http://www.gnu.org/licenses/>.
 
 ;;;*****************************************************************************
+
+;;; Commentary:
+
+;; This file provides all of the CLIPS shell integration functionality. Please
+;; read clips-mode.el for usage details.
 
 ;;; Code:
 
