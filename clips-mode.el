@@ -2,7 +2,7 @@
 
 ;;;************************************************************************
 
-;; Copyright (C) 1999 by David E. Young <david.young@fnc.fujitsu.com>.
+;; Copyright © 1999 by David E. Young <david.young@fnc.fujitsu.com>.
 
 ;; This program is free software; you can redistribute it and/or modify it under
 ;; the terms of the GNU General Public License as published by the Free Software
@@ -19,7 +19,7 @@
 
 ;;;************************************************************************
 
-;; Copyright (C) 2010 by Andrey Kotlarski <m00naticus@gmail.com>.
+;; Copyright © 2010 by Andrey Kotlarski <m00naticus@gmail.com>.
 
 ;; This program is free software; you can redistribute it and/or modify it under
 ;; the terms of the GNU General Public License as published by the Free Software
