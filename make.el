@@ -1,4 +1,5 @@
 ;;; Evaluate this entire file to prepare the package.
+;;; Switch to the *clips-mode-build* buffer to see the results.
 
 (setq TMPDIR "~/tmp")
 ;; TODO: Determine this from a file dynamically
@@ -29,7 +30,7 @@
 
 ;; Create the TAR package
 (start-process "clips-mode-build"
-               (get-buffer-create "*clips-mode-build")
+               (get-buffer-create "*clips-mode-build*")
                "/bin/bash"
                "-c"
                (concat "tar -cvf " PKGNAM " " PKGDIR))
