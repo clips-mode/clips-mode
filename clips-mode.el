@@ -1,6 +1,6 @@
 ;;; clips-mode.el --- Clips editing mode.
 
-;;;************************************************************************
+;;;*****************************************************************************
 
 ;; Copyright © 1999 by David E. Young <david.young@fnc.fujitsu.com>.
 
@@ -17,7 +17,7 @@
 ;; this program if not, write to the Free Software Foundation, Inc., 59 Temple
 ;; Place, Suite 330, Boston, MA 02111-1307 USA.
 
-;;;************************************************************************
+;;;*****************************************************************************
 
 ;; Copyright © 2010 by Andrey Kotlarski <m00naticus@gmail.com>.
 
@@ -34,7 +34,7 @@
 ;; this program if not, write to the Free Software Foundation, Inc., 59 Temple
 ;; Place, Suite 330, Boston, MA 02111-1307 USA.
 
-;;;************************************************************************
+;;;*****************************************************************************
 
 ;;; Code:
 
