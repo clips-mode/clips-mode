@@ -2,7 +2,6 @@
 ;;; Switch to the *clips-mode-build* buffer to see the results.
 
 (setq TMPDIR "~/tmp")
-;; TODO: Determine this from a file dynamically
 (setq RELNAM "clips-mode-0.7")
 (setq PKGDIR (concat TMPDIR "/" RELNAM))
 (setq PKGNAM (concat PKGDIR ".tar"))
