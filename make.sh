@@ -14,13 +14,13 @@ fi
 # Go to the base directory
 cd "$TMPDIR"
 
-# Check if a build directory exists, and if it does, delete it, otherwise
-# create from scratch.
+# If the release directory exists, blow it away
 if [ -d "$RELNAM" ]; then
     rm -rf "$RELNAM"
-else
-    mkdir "$RELNAM"
 fi
+
+# Create the release directory from scratch
+mkdir "$RELNAM"
 
 # Copy over files
 cp "$SRCDIR"/"clips-mode-pkg.el" "$RELNAM"
