@@ -26,6 +26,20 @@
 ;; this program if not, write to the Free Software Foundation, Inc., 59 Temple
 ;; Place, Suite 330, Boston, MA 02111-1307 USA.
 
+;; Some parts of this program were borrowed from Franz Inc's Emacs Lisp
+;; Interface (ELI) to Allegro Common Lisp. The following copyright fulfills my
+;; obligation in that respect:
+
+;; Copyright (c) 1987-1993 Franz Inc, Berkeley, Ca.
+
+;; Permission is granted to any individual or institution to use, copy, modify,
+;; and distribute this software, provided that this complete copyright and
+;; permission notice is maintained, intact, in all copies and supporting
+;; documentation.
+
+;; Franz Incorporated provides this software "as is" without express or implied
+;; warranty.
+
 ;;;*****************************************************************************
 
 ;; Copyright © 2010 by Andrey Kotlarski <m00naticus@gmail.com>.
