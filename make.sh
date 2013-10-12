@@ -1,35 +1,37 @@
-;;; Evaluate this entire file to prepare the package.
-;;; Switch to the *clips-mode-build* buffer to see the results.
+#!/bin/bash
 
-(setq TMPDIR "~/tmp")
-(setq RELNAM "clips-mode-0.7")
-(setq PKGDIR (concat TMPDIR "/" RELNAM))
-(setq PKGNAM (concat PKGDIR ".tar"))
+# Execute this script from within the clips-mode project root.
+SRCDIR="$PWD"
+TMPDIR="/home/$USER/tmp"
+RELNAM="clips-mode-0.7"
+PKGNAM="$RELNAM".tar
 
-;; Check if /home/<username>/tmp exists and create it if it does not.
-;; If this fails, the script will expectedly and rightly fail.
-(if (not (file-accessible-directory-p TMPDIR))
-    (make-directory TMPDIR))
+# Check if /home/<username>/tmp exists and create it if it does not.
+if [ ! -d "$TMPDIR" ]; then
+    mkdir "$TMPDIR"
+fi
 
-;; Check if a build directory exists, and if it does, delete it, otherwise
-;; create from scratch.
-(if (not (file-accessible-directory-p PKGDIR))
-    (make-directory PKGDIR)
-  (delete-directory PKGDIR t))
+# Go to the base directory
+cd "$TMPDIR"
 
-;; Copy over files
-(copy-file "clips-mode-pkg.el" (concat PKGDIR "/" "clips-mode-pkg.el"))
-(copy-file "clips-mode.el" (concat PKGDIR "/" "clips-mode.el"))
-(copy-file "inf-clips.el" (concat PKGDIR "/" "inf-clips.el"))
-(copy-file "COPYING" (concat PKGDIR "/" "COPYING"))
+# Check if a build directory exists, and if it does, delete it, otherwise
+# create from scratch.
+if [ -d "$RELNAM" ]; then
+    rm -rf "$RELNAM"
+else
+    mkdir "$RELNAM"
+fi
 
-;; Check if the package file already exists and delete it if it does.
-(if (file-exists-p PKGNAM)
-    (delete-file PKGNAM))
+# Copy over files
+cp "$SRCDIR"/"clips-mode-pkg.el" "$RELNAM"
+cp "$SRCDIR"/"clips-mode.el" "$RELNAM"
+cp "$SRCDIR"/"inf-clips.el" "$RELNAM"
+cp "$SRCDIR"/"COPYING" "$RELNAM"
 
-;; Create the TAR package
-(start-process "clips-mode-build"
-               (get-buffer-create "*clips-mode-build*")
-               "/bin/bash"
-               "-c"
-               (concat "tar -cvf " PKGNAM " " PKGDIR))
+# Check if the package file already exists and delete it if it does.
+if [ -e "$PKGNAM" ]; then
+    rm "$PKGNAM"
+fi
+
+# Create the TAR package
+tar cvf "$PKGNAM" "$RELNAM"
