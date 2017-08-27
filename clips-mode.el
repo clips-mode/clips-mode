@@ -252,8 +252,6 @@
   (setq adaptive-fill-mode nil)
   (make-local-variable 'indent-line-function)
   (setq indent-line-function 'lisp-indent-line)
-  (make-local-variable 'indent-region-function)
-  (setq indent-region-function 'lisp-indent-region)
   (make-local-variable 'parse-sexp-ignore-comments)
   (setq parse-sexp-ignore-comments t)
   (make-local-variable 'outline-regexp)
