@@ -191,7 +191,9 @@
                       "progn" "progn$" "not" "or" "switch" "case" "and" "reset"
                       "assert" "test" "declare" "salience" "return" "bind"
                       "retract" "explicit" "unique" "node-index-hash" "halt"
-                      "=>")))
+                      "=>" "expand$" "delayed-do-for-all-facts" "do-for-fact"
+                      "do-for-all-facts" "duplicate" "foreach"
+		      "loop-for-count" "modify")))
                   (clips-connective-constraints
                    (regexp-opt '("|" "&"))))
               (list
