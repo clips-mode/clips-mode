@@ -195,7 +195,7 @@
                   (clips-connective-constraints
                    (regexp-opt '("|" "&"))))
               (list
-               (cons (concat "\\<\\(" clips-builtins "\\)\\>") 'font-lock-builtin-face)
+               (cons (concat "\\_<\\(" clips-builtins "\\)\\_>") 'font-lock-builtin-face)
                (cons (concat "\\<\\(" clips-connective-constraints "\\)\\>")
                      'font-lock-builtin-face)))))
   "Gaudy expressions to highlight in Clips modes.")
