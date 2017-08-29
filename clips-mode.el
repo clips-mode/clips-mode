@@ -320,6 +320,7 @@
 (put 'duplicate 'clips-indent-function 1)
 (put 'foreach 'clips-indent-function 2)
 (put 'if 'clips-indent-function 'clips-if-indent)
+(put 'loop-for-count 'clips-indent-function 1)
 (put 'modify 'clips-indent-function 1)
 (put 'progn 'clips-indent-function 0)
 (put 'progn$ 'clips-indent-function 1)
