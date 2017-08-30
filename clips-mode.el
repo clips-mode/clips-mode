@@ -186,14 +186,14 @@
           (eval-when-compile
             (let ((clips-builtins
                    (regexp-opt
-                    '("slot" "multislot" "type" "default" "default-dynamic"
-                      "extends" "crlf""range" "nil" "if" "then" "else" "while"
-                      "progn" "progn$" "not" "or" "switch" "case" "and" "reset"
-                      "assert" "test" "declare" "salience" "return" "bind"
-                      "retract" "explicit" "unique" "node-index-hash" "halt"
-                      "=>" "expand$" "delayed-do-for-all-facts" "do-for-fact"
-                      "do-for-all-facts" "duplicate" "foreach"
-		      "loop-for-count" "modify")))
+                    '("=>" "and" "assert" "bind" "case" "crlf" "declare"
+                      "default" "default-dynamic" "delayed-do-for-all-facts"
+                      "do-for-all-facts" "do-for-fact" "duplicate" "else"
+                      "expand$" "explicit" "extends" "foreach" "halt" "if"
+                      "loop-for-count" "modify" "multislot" "nil"
+                      "node-index-hash" "not" "or" "progn" "progn$" "range"
+                      "reset" "retract" "return" "salience" "slot" "switch"
+                      "test" "then" "type" "unique" "while")))
                   (clips-connective-constraints
                    (regexp-opt '("|" "&"))))
               (list
