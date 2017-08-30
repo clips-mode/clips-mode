@@ -186,7 +186,7 @@
           (eval-when-compile
             (let ((clips-builtins
                    (regexp-opt
-                    '("=>" "and" "assert" "bind" "case" "crlf" "declare"
+                    '("=>" "and" "assert" "bind" "break" "case" "crlf" "declare"
                       "default" "default-dynamic" "delayed-do-for-all-facts"
                       "do-for-all-facts" "do-for-fact" "duplicate" "else"
                       "expand$" "explicit" "extends" "foreach" "halt" "if"
