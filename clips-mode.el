@@ -356,6 +356,7 @@
 (put 'do-for-instance 'clips-indent-function 2)
 (put 'duplicate 'clips-indent-function 1)
 (put 'duplicate-instance 'clips-indent-function 1)
+(put 'forall 'clips-indent-function 1)
 (put 'foreach 'clips-indent-function 2)
 (put 'if 'clips-indent-function 'clips-if-indent)
 (put 'loop-for-count 'clips-indent-function 1)
