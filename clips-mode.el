@@ -186,14 +186,23 @@
           (eval-when-compile
             (let ((clips-builtins
                    (regexp-opt
-                    '("=>" "and" "assert" "bind" "break" "case" "crlf" "declare"
-                      "default" "default-dynamic" "delayed-do-for-all-facts"
-                      "do-for-all-facts" "do-for-fact" "duplicate" "else"
-                      "expand$" "explicit" "extends" "foreach" "halt" "if"
-                      "loop-for-count" "modify" "multislot" "nil"
-                      "node-index-hash" "not" "or" "progn" "progn$" "range"
-                      "reset" "retract" "return" "salience" "slot" "switch"
-                      "test" "then" "type" "unique" "while")))
+                    '("=>" "active-duplicate-instance"
+                      "active-message-duplicate-instance"
+                      "active-modify-instance"
+                      "active-message-modify-instance" "and" "assert" "bind"
+                      "break" "case" "crlf" "declare" "default"
+                      "default-dynamic" "delayed-do-for-all-facts"
+                      "delayed-do-for-all-instances" "do-for-all-facts"
+                      "do-for-all-instances" "do-for-fact" "do-for-instance"
+                      "duplicate" "duplicate-instance" "else" "expand$"
+                      "explicit" "extends" "foreach" "halt" "if" "is-a"
+                      "loop-for-count" "message-duplicate-instance"
+                      "message-modify-instance" "modify" "modify-instance"
+                      "multislot" "nil" "node-index-hash" "not"
+                      "object-pattern-match-delay" "or" "pattern-match"
+                      "progn" "progn$" "range" "reset" "retract" "return"
+                      "role" "salience" "single-slot" "slot" "switch" "test"
+                      "then" "type" "unique" "while")))
                   (clips-connective-constraints
                    (regexp-opt '("|" "&"))))
               (list
@@ -331,18 +340,30 @@
            (+ last-form-column lisp-body-indent))
           (t last-form-column))))
 
+(put 'active-duplicate-instance 'clips-indent-function 1)
+(put 'active-message-duplicate-instance 'clips-indent-function 1)
+(put 'active-modify-instance 'clips-indent-function 1)
+(put 'active-message-modify-instance 'clips-indent-function 1)
 (put 'assert 'clips-indent-function 0)
 (put 'bind 'clips-indent-function 1)
 (put 'case 'clips-indent-function 'clips-case-indent)
 (put 'defrule 'clips-indent-function 'clips-defrule-indent)
 (put 'delayed-do-for-all-facts 'clips-indent-function 2)
-(put 'do-for-fact 'clips-indent-function 2)
+(put 'delayed-do-for-all-instances 'clips-indent-function 2)
 (put 'do-for-all-facts 'clips-indent-function 2)
+(put 'do-for-all-instances 'clips-indent-function 2)
+(put 'do-for-fact 'clips-indent-function 2)
+(put 'do-for-instance 'clips-indent-function 2)
 (put 'duplicate 'clips-indent-function 1)
+(put 'duplicate-instance 'clips-indent-function 1)
 (put 'foreach 'clips-indent-function 2)
 (put 'if 'clips-indent-function 'clips-if-indent)
 (put 'loop-for-count 'clips-indent-function 1)
+(put 'message-duplicate-instance 'clips-indent-function 1)
+(put 'message-modify-instance 'clips-indent-function 1)
 (put 'modify 'clips-indent-function 1)
+(put 'modify-instance 'clips-indent-function 1)
+(put 'object-pattern-match-delay 'clips-indent-function 0)
 (put 'progn 'clips-indent-function 0)
 (put 'progn$ 'clips-indent-function 1)
 (put 'switch 'clips-indent-function 1)
