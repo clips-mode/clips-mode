@@ -394,6 +394,8 @@
       (let ((function (buffer-substring (point)
 					(progn (forward-sexp 1) (point))))
 	    method)
+        (if (string-match "::\\([^:]+\\)\\'" function)
+            (setq function (match-string 1 function)))
 	(setq method (or (function-get (intern-soft function)
                                        'clips-indent-function)
 			 (get (intern-soft function) 'clips-indent-hook)))
